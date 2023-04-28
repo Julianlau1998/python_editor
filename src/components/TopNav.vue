@@ -3,7 +3,7 @@
         <div class="columns is-mobile">
             <div class="column ml-4 is-pointer">
                 <span @click="home">
-                    txt-Editor
+                    Python-Editor
                 </span>
             </div>
             <div class="column settingsWrapper">
