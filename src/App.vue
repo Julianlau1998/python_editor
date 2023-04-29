@@ -14,10 +14,10 @@
     created () {
       if (this.iosLiteApp) {
         setTimeout(() => {
-          this.showInterstitial()
+          //this.showInterstitial()
         }, 20000)
         setInterval(() => {
-          this.showInterstitial()
+          //this.showInterstitial()
         }, 70000)
       }
 
