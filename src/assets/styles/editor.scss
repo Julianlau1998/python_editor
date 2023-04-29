@@ -97,6 +97,15 @@ textarea {
     margin-bottom: 10rem;
 }
 
+.prism-editor-wrapper .prism-editor__editor, .prism-editor-wrapper .prism-editor__textarea {
+    word-break: break-all;
+}
+
+.prism-editor-wrapper .prism-editor__textarea, .prism-editor-wrapper .prism-editor__editor, .prism-editor-wrapper .prism-editor__textarea {
+    width: 98%;
+}
+
+
 @media (min-width: 1500px) {
     .is-markdown-content {
         max-width: 110rem;
