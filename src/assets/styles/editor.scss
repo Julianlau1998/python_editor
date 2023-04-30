@@ -114,6 +114,10 @@ textarea {
     padding-bottom: 0.5rem !important;
 }
 
+.prism-editor-wrapper {
+    overflow: hidden;
+}
+
 
 @media (min-width: 1500px) {
     .is-markdown-content {
