@@ -14,11 +14,11 @@
     created () {
       if (this.iosLiteApp) {
         setTimeout(() => {
-          //this.showInterstitial()
-        }, 20000)
+          this.showInterstitial()
+        }, 40000)
         setInterval(() => {
-          //this.showInterstitial()
-        }, 70000)
+          this.showInterstitial()
+        }, 90000)
       }
 
       this.iOS = [
