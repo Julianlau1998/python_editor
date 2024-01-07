@@ -31,6 +31,9 @@ export default {
   computed: {
     iOS () {
       return this.$store.state.iOS
+    },
+    iosLiteApp () {
+      return window.webkit && window.webkit.messageHandlers
     }
   },
   created() {
