@@ -12,15 +12,6 @@
       }
     },
     created () {
-      if (this.iosLiteApp) {
-        setTimeout(() => {
-          this.showInterstitial()
-        }, 40000)
-        setInterval(() => {
-          this.showInterstitial()
-        }, 90000)
-      }
-
       this.iOS = [
       'iPad Simulator',
       'iPhone Simulator',
@@ -37,13 +28,6 @@
       }
     },
     methods: {
-      showInterstitial () {
-        if (this.iosLiteApp) {
-          window.webkit.messageHandlers.showInterstitial.postMessage({
-            "message": 'showInterstitial'
-          })
-        }
-      }
     }
   }
 </script>

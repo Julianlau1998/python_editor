@@ -1,10 +1,7 @@
 <template>
   <div>
     <topNav @fileInput="fileInput" @share="shareFile" />
-    <Editor :share="share" />
-<!--
-    <AdCard v-if="!iOS" class="mt-5" />
--->
+    <Editor @addClick="addClick" :share="share" />
     <RateModal v-if="showRateModal" @openStore="openStore" @close="showRateModal=false" />
   </div>
 </template>
@@ -27,7 +24,8 @@ export default {
     return {
       inputFile: '',
       share: false,
-      showRateModal: false
+      showRateModal: false,
+      clicks: 0
     }
   },
   computed: {
@@ -56,6 +54,22 @@ export default {
     },
     openStore () {
       window.location.href = 'https://play.google.com/store/apps/details?id=app.markdowneditor.jl.com'
+    },
+    addClick () {
+      this.clicks += 1
+      localStorage.setItem('clicks', this.clicks)
+      if(this.clicks >= 3) {
+          this.showInterstitial()
+          localStorage.setItem('clicks', 0)
+          this.clicks = 0
+      }
+    },
+    showInterstitial () {
+      if (this.iosLiteApp) {
+          window.webkit.messageHandlers.showInterstitial.postMessage({
+            "message": 'showInterstitial'
+          })
+      }
     }
   }
 }
