@@ -26,6 +26,7 @@
         <transition name="fade" mode="out-in">
             <div :key="1">
                 <prism-editor
+                    @click="addClick"
                     class="my-editor"
                     v-model="code"
                     :highlight="highlighter"
