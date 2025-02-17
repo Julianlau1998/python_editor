@@ -115,6 +115,7 @@ export default {
                 this.saveFileModalOpen = true
                 return
             }
+            this.addClick()
             this.shareFile()
         },
         createFileLink (fileName) {
